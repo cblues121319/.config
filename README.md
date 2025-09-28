@@ -194,6 +194,8 @@ Download and install [Alfred](https://www.alfredapp.com) for enhanced productivi
 
 # ☁️ Development Environment Setup
 
+<img src="./nvim/dashboard.png" width=800>
+
 <details>
     <summary style="font-size: 2em;"><i>{...}</i></summary>
 
