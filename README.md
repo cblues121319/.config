@@ -1,6 +1,9 @@
 
 
-# macOS System Settings Configuration
+# ⚙️ macOS System Settings
+
+<details>
+    <summary style="font-size: 2em;"><i>{...}</i></summary>
 
 ## Display Settings
 Configure display for optimal development work:
@@ -65,16 +68,6 @@ Recommended core applications:
 ### Spotlight
 - Remove Spotlight from menu bar (keep keyboard shortcut)
 
-## Mouse and Hover Settings
-
-### Accessibility Zoom
-1. Go to `System Settings > Accessibility > Zoom`
-2. Configure Hover Text:
-   - Text size: 32pt
-   - Choose preferred font
-   - Set activation modifier to Option/Alt
-   - Customize colors as needed
-
 ## Appearance
 
 ### Color Scheme
@@ -118,18 +111,18 @@ General Navigation:
 
 ### Mission Control (for trackpad-free navigation)
 ```
-• Mission Control: Ctrl + Up
-• Show Notification Center: Ctrl + Left
-• Application Windows: Cmd + Down
-• Show Desktop: Ctrl + Right
-• Move left a space: Cmd + Left
-• Move right a space: Cmd + Right
+• Mission Control: Ctrl + Shift + W
+• Show Launchpad: Ctrl + Shift + X
+• Show Notification Center: Ctrl + Right
+• Application Windows: Ctrl + Down
+• Show Desktop: Ctrl + Shift + S
+• Move left a space: Ctrl + Shift + A
+• Move right a space: Ctrl + Shift + D
 ```
 
 ### Launchpad
 ```
 • Toggle Dock hiding: Option + Cmd + D
-• Show Launchpad: Ctrl + Down
 ```
 
 ### Spotlight (recommended: disable both for custom alternatives)
@@ -195,5 +188,6 @@ Configure shortcuts for specific applications:
 ### Alfred (Spotlight Replacement)
 Download and install [Alfred](https://www.alfredapp.com) for enhanced productivity and search capabilities.
 
+</details>
 
 
