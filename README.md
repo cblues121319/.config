@@ -842,7 +842,7 @@ python -m ipykernel install --user --name pytorch --display-name "Python (PyTorc
 jupyter notebook
 ```
 
-**Example PyTorch Environment (torch-conda.yml):**
+&#x23f5; *pytorch*: [*official website*](https://pytorch.org) *or refer to* [*yaml file*](https://github.com/jeffheaton/app_deep_learning/blob/main/install/pytorch-install-aug-2023.ipynb)
 ```yaml
 name: pytorch-env
 channels:
@@ -895,7 +895,8 @@ jupyter kernelspec list
 jupyter kernelspec uninstall kernel_name
 ```
 
-### TensorFlow Setup
+### Tensorflow
+&#x23f5; *Tensorflow: [here](https://github.com/jeffheaton/t81_558_deep_learning/tree/master/install)*
 ```bash
 cd ~/anywhere-yml-for-installation
 
@@ -968,6 +969,8 @@ java File
 ```
 
 ### LaTeX with VimTeX
+&#x23f5; *VimTex [repo](https://github.com/lervag/vimtex)* <br>
+
 **Installation:**
 ```bash
 # LaTeX distribution (choose one)
@@ -1098,6 +1101,20 @@ key_bindings:
 
 </details>
 
+# &#x26f2; Application
+<details>
+    <summary style="font-size: 2em;"><i>{...}</i></summary>
 
-
-
+### &#x260d; Download
+*[QuickTime Player](https://www.youtube.com/watch?v=LSmM5FXzVBg)*
+```
+[OK] chrome
+[OK] zoom.us
+[OK] notability
+[OK] movist
+[OK] The Unarchiver (app store)
+[?] xcode (app store)
+[?] cursor Pro
+[?] parallels
+```
+</details>
