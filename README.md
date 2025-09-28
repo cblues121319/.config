@@ -453,10 +453,10 @@ mongosh  # test connection
 **Server Installation:**
 ```bash
 # Install PostgreSQL server
-brew install postgresql@15
+brew install postgresql
 
 # Start PostgreSQL service
-brew services start postgresql@15
+brew services start postgresq
 
 # Create a database
 createdb mydatabase
@@ -783,6 +783,7 @@ rm -rf ~/.local/share/nvim/
 Automate repetitive operations:
 
 **Example Git Push Script:**
+&#x23f5; *automate operation that are repetitive for your convenience, refer to my [`scripts`](./myScript/README.md)*
 ```bash
 #!/bin/bash
 # Save as 'gpush' in PATH
