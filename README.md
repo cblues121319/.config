@@ -1,6 +1,6 @@
 
 
-# ⚙️ macOS System Settings
+# ⚙️ macOS Settings
 
 <details>
     <summary style="font-size: 2em;"><i>{...}</i></summary>
@@ -192,7 +192,7 @@ Download and install [Alfred](https://www.alfredapp.com) for enhanced productivi
 
 
 
-# ☁️ Development Environment Setup
+# ☁️ Dev Env Setup
 
 <img src="./nvim/dashboard.png" width=800>
 
