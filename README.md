@@ -449,6 +449,141 @@ mongosh  # test connection
 
 **MongoDB Compass:** Download from [MongoDB website](https://www.mongodb.com/try/download/compass) (ARM64 Platform)
 
+### PostgreSQL Database
+**Server Installation:**
+```bash
+# Install PostgreSQL server
+brew install postgresql@15
+
+# Start PostgreSQL service
+brew services start postgresql@15
+
+# Create a database
+createdb mydatabase
+
+# Connect to PostgreSQL console
+psql postgres
+psql mydatabase  # Connect to specific database
+```
+
+**pgAdmin (GUI Tool):**
+```bash
+# Install pgAdmin 4
+brew install --cask pgadmin4
+
+# Alternative: Download from https://www.pgadmin.org/download/pgadmin-4-macos/
+```
+
+**Database Console Commands:**
+```sql
+-- Connect to database
+\c database_name
+
+-- List all databases
+\l
+
+-- List all tables in current database
+\dt
+
+-- Describe table structure
+\d table_name
+
+-- List all users/roles
+\du
+
+-- Exit psql
+\q
+
+-- Execute SQL file
+\i /path/to/file.sql
+
+-- Show current database and user
+SELECT current_database(), current_user;
+```
+
+**Essential SQL Commands:**
+```sql
+-- Create database
+CREATE DATABASE myapp_dev;
+
+-- Create user with password
+CREATE USER developer WITH PASSWORD 'secure_password';
+
+-- Grant privileges
+GRANT ALL PRIVILEGES ON DATABASE myapp_dev TO developer;
+
+-- Create table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert data
+INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');
+
+-- Query data
+SELECT * FROM users;
+SELECT username, email FROM users WHERE id = 1;
+
+-- Update data
+UPDATE users SET email = 'newemail@example.com' WHERE id = 1;
+
+-- Delete data
+DELETE FROM users WHERE id = 1;
+
+-- Drop table
+DROP TABLE users;
+
+-- Drop database
+DROP DATABASE myapp_dev;
+```
+
+**Connection Configuration:**
+```bash
+# Default PostgreSQL connection parameters
+Host: localhost
+Port: 5432
+Database: postgres (default)
+Username: your_system_username
+Password: (usually empty for local development)
+
+# Connection string format
+postgresql://username:password@localhost:5432/database_name
+```
+
+**Common Development Tasks:**
+```bash
+# Backup database
+pg_dump mydatabase > backup.sql
+
+# Restore database
+psql mydatabase < backup.sql
+
+# Reset user password
+psql postgres -c "ALTER USER developer PASSWORD 'new_password';"
+
+# Check PostgreSQL status
+brew services list | grep postgresql
+
+# Stop PostgreSQL service
+brew services stop postgresql@15
+
+# Restart PostgreSQL service
+brew services restart postgresql@15
+```
+
+**pgAdmin Setup:**
+1. Open pgAdmin 4
+2. Create new server connection:
+   - Name: Local Development
+   - Host: localhost
+   - Port: 5432
+   - Database: postgres
+   - Username: your_system_username
+3. Save connection for future use
+
 ### Node.js and npm
 Download from [Node.js official website](https://nodejs.org) (LTS version recommended)
 ```bash
@@ -961,5 +1096,7 @@ key_bindings:
 </details>
 
 </details>
+
+
 
 
