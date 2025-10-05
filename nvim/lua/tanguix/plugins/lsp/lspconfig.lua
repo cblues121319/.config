@@ -1,5 +1,7 @@
 
 
+-- lspconfig.lua
+
 -- lot's of useful shortcut commands, explore them when you have time
 -- 1) cursor on variable: <leader>rn, rename the variable and all variable within this file get update to new name
 
@@ -75,13 +77,30 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    -- Change the Diagnostic symbols in the sign column (gutter)
-    -- icons for error notification
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
+    -- Configure diagnostic signs (modern approach)
+    vim.diagnostic.config({
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = " ",
+          [vim.diagnostic.severity.WARN] = " ",
+          [vim.diagnostic.severity.HINT] = "󰠠 ",
+          [vim.diagnostic.severity.INFO] = " ",
+        },
+      },
+      virtual_text = {
+        prefix = "●",
+        spacing = 4,
+      },
+      update_in_insert = false,
+      underline = true,
+      severity_sort = true,
+      float = {
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
+    })
 
     -- Configure servers directly (modern approach)
     local servers = {
@@ -142,6 +161,5 @@ return {
     end
   end,
 }
-
 
 
