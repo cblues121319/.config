@@ -31,7 +31,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         -- TODO: c++ lsp might needed in the future
-        "ts_ls",
+        "tsserver",
         "html",
         "cssls",
         -- "tailwindcss",  -- do I need this?
