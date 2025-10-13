@@ -458,7 +458,7 @@ mongosh  # test connection
 brew install postgresql
 
 # Start PostgreSQL service
-brew services start postgresq
+brew services start postgresql
 
 # Create a database
 createdb mydatabase

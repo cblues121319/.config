@@ -100,7 +100,7 @@ vi_mode_style = "Underline"
 
 # font size
 [font]
-size = 16 # for 3270 Nerd Font
+size = 15 # for 3270 Nerd Font
 # size = 14
 
 
